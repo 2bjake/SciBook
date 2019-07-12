@@ -9,7 +9,7 @@
 import SwiftUI
 
 private func awardRank(_ book: Book) -> Int {
-    let awardsRanked = [Book.Award.hugo, .nebula, .locus]
+    let awardsRanked = [Award.hugo, .nebula, .locus]
     
     for (rank, award) in awardsRanked.enumerated() {
         if book.hasAward(award) {
@@ -18,7 +18,6 @@ private func awardRank(_ book: Book) -> Int {
     }
     return awardsRanked.count
 }
-
 
 private func yearAwardSorter(a: Book, b: Book) -> Bool {
     if a.year == b.year {
@@ -30,7 +29,7 @@ private func yearAwardSorter(a: Book, b: Book) -> Bool {
 struct BookList : View {
     var body: some View {
         NavigationView {
-            List(bookData.sorted(by: yearAwardSorter)) { book in
+            List(BookRepository.books.sorted(by: yearAwardSorter)) { book in
                 NavigationLink(destination: BookDetail(book: book)) {
                     BookRow(book: book)
                 }

@@ -17,10 +17,12 @@
 		5591B9CB22D7B9F40024DAD1 /* SciBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9CA22D7B9F40024DAD1 /* SciBookUITests.swift */; };
 		5591B9D922D7BA290024DAD1 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9D822D7BA290024DAD1 /* BookList.swift */; };
 		5591B9DB22D7BACA0024DAD1 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 5591B9DA22D7BACA0024DAD1 /* books.json */; };
-		5591B9DF22D7BB6C0024DAD1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9DE22D7BB6C0024DAD1 /* Data.swift */; };
-		5591B9E522D7BD700024DAD1 /* BookModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E422D7BD700024DAD1 /* BookModels.swift */; };
+		5591B9E522D7BD700024DAD1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E422D7BD700024DAD1 /* Book.swift */; };
 		5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E622D7C0860024DAD1 /* BookRow.swift */; };
 		5591B9E922D7C1860024DAD1 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E822D7C1860024DAD1 /* BookDetail.swift */; };
+		55E710BE22D8057200A17E3D /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BD22D8057200A17E3D /* BookRepository.swift */; };
+		55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BF22D80A0000A17E3D /* BookJSONModel.swift */; };
+		55E710C222D80A4800A17E3D /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710C122D80A4800A17E3D /* Award.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +59,12 @@
 		5591B9CC22D7B9F40024DAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5591B9D822D7BA290024DAD1 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		5591B9DA22D7BACA0024DAD1 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
-		5591B9DE22D7BB6C0024DAD1 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		5591B9E422D7BD700024DAD1 /* BookModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookModels.swift; sourceTree = "<group>"; };
+		5591B9E422D7BD700024DAD1 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5591B9E622D7C0860024DAD1 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 		5591B9E822D7C1860024DAD1 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		55E710BD22D8057200A17E3D /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
+		55E710BF22D80A0000A17E3D /* BookJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookJSONModel.swift; sourceTree = "<group>"; };
+		55E710C122D80A4800A17E3D /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +166,10 @@
 		5591B9DD22D7BB5B0024DAD1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9DE22D7BB6C0024DAD1 /* Data.swift */,
-				5591B9E422D7BD700024DAD1 /* BookModels.swift */,
+				55E710BD22D8057200A17E3D /* BookRepository.swift */,
+				55E710C122D80A4800A17E3D /* Award.swift */,
+				5591B9E422D7BD700024DAD1 /* Book.swift */,
+				55E710BF22D80A0000A17E3D /* BookJSONModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -312,11 +318,13 @@
 			files = (
 				5591B9A622D7B9F20024DAD1 /* AppDelegate.swift in Sources */,
 				5591B9E922D7C1860024DAD1 /* BookDetail.swift in Sources */,
-				5591B9DF22D7BB6C0024DAD1 /* Data.swift in Sources */,
+				55E710BE22D8057200A17E3D /* BookRepository.swift in Sources */,
+				55E710C222D80A4800A17E3D /* Award.swift in Sources */,
 				5591B9A822D7B9F20024DAD1 /* SceneDelegate.swift in Sources */,
 				5591B9D922D7BA290024DAD1 /* BookList.swift in Sources */,
 				5591B9AB22D7B9F20024DAD1 /* SciBook.xcdatamodeld in Sources */,
-				5591B9E522D7BD700024DAD1 /* BookModels.swift in Sources */,
+				5591B9E522D7BD700024DAD1 /* Book.swift in Sources */,
+				55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */,
 				5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

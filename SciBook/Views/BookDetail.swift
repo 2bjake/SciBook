@@ -19,7 +19,7 @@ struct BookDetail : View {
 #if DEBUG
 struct BookDetail_Previews : PreviewProvider {
     static var previews: some View {
-        BookDetail(book: bookData[0])
+        BookDetail(book: BookRepository.books[0])
     }
 }
 #endif

@@ -8,68 +8,57 @@
 
 import SwiftUI
 
-private struct AwardConfig: Identifiable {
-    let award: Book.Award
-    let hasAward: Bool
-    
-    var id: String { award.rawValue }
+extension Award {
+    func icon(enabled: Bool) -> some View {
+        let color: Color = {
+            switch (enabled, self) {
+            case (false, _): return .gray
+            case (true, .hugo): return .red
+            case (true, .nebula): return .blue
+            case (true, .locus): return .green
+            }
+        }()
 
-    var imageName: String {
-        switch (award, hasAward) {
-        case (.hugo, true):
-            return "h.square.fill"
-        case (.hugo, false):
-            return "h.square"
-        case (.nebula, true):
-            return "n.square.fill"
-        case (.nebula, false):
-            return "n.square"
-        case (.locus, true):
-            return "l.square.fill"
-        case (.locus, false):
-            return "l.square"
+        var imageName: String = {
+            switch self {
+            case .hugo: return "h.square"
+            case .nebula: return "n.square"
+            case .locus: return "l.square"
+            }
+        }()
+        
+        if enabled {
+            imageName += ".fill"
         }
-    }
-
-    var color: Color {
-        guard hasAward else { return .gray}
-        switch award {
-        case .hugo: return .red
-        case .nebula: return .blue
-        case .locus: return .green
-        }
+        return Image(systemName: imageName)
+            .foregroundColor(color)
     }
 }
 
 struct BookRow : View {
     let book: Book
     
-    private var image: Image {
+    private var coverImage: Image {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
         return Image(uiImage: UIImage(systemName: "book", withConfiguration: imageConfig)!)
     }
     
-    private var awardConfigs: [AwardConfig] {
-        return [
-            AwardConfig(award: .hugo, hasAward: book.hasAward(.hugo)),
-            AwardConfig(award: .nebula, hasAward: book.hasAward(.nebula)),
-            AwardConfig(award: .locus, hasAward: book.hasAward(.locus))
-        ]
+    private func iconForAward(_ award: Award) -> some View {
+        award.icon(enabled: book.hasAward(award))
     }
-    
+
     var body: some View {
         HStack {
-            image
+            coverImage
             VStack(alignment: .leading) {
                 Text(book.title)
                     .font(.headline)
-                Text("\(book.authorName) - \(book.year)")
+                Text("\(book.year) - \(book.authorName)")
                     .font(.subheadline)
                 HStack(alignment: .center) {
-                    ForEach(awardConfigs) { awardConfig in
-                        Image(systemName: awardConfig.imageName)
-                            .foregroundColor(awardConfig.color)
-                    }
+                    iconForAward(.hugo)
+                    iconForAward(.nebula)
+                    iconForAward(.locus)
                 }
             }
         }
@@ -80,8 +69,8 @@ struct BookRow : View {
 struct BookRow_Previews : PreviewProvider {
     static var previews: some View {
         Group {
-            BookRow(book: bookData[0])
-            BookRow(book: bookData[1])
+            BookRow(book: BookRepository.books[0])
+            BookRow(book: BookRepository.books[1])
         }.previewLayout(.fixed(width: 300, height: 70))
     }
 }
