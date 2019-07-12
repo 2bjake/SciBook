@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  BookDetail.swift
 //  SciBook
 //
 //  Created by Jake Foster on 7/11/19.
@@ -8,16 +8,18 @@
 
 import SwiftUI
 
-struct ContentView : View {
+struct BookDetail : View {
+    let book: Book
+    
     var body: some View {
-        Text("Hello World")
+        Text("Hello World!")
     }
 }
 
 #if DEBUG
-struct ContentView_Previews : PreviewProvider {
+struct BookDetail_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BookDetail(book: bookData[0])
     }
 }
 #endif
