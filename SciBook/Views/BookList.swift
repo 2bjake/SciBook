@@ -29,9 +29,12 @@ private func yearAwardSorter(a: Book, b: Book) -> Bool {
 struct BookList : View {
     var body: some View {
         NavigationView {
-            List(BookRepository.books.sorted(by: yearAwardSorter)) { book in
-                NavigationLink(destination: BookDetail(book: book)) {
-                    BookRow(book: book)
+            List {
+                BookListFilter()
+                ForEach(BookRepository.books.sorted(by: yearAwardSorter)) { book in
+                    NavigationLink(destination: BookDetail(book: book)) {
+                        BookRow(book: book)
+                    }
                 }
             }
         }

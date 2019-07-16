@@ -16,6 +16,11 @@ public struct Book: Identifiable {
     public let awards: [Award: Bool]
 }
 
+// TODO: make this real
+extension Book {
+    public var isRead: Bool { Bool.random() }
+}
+
 public extension Book {
     func hasAward(_ award: Award) -> Bool { awards[award] ?? false }
 }

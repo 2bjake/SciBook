@@ -38,13 +38,19 @@ extension Award {
 struct BookRow : View {
     let book: Book
     
-    private var coverImage: Image {
+    private var coverImage: some View {
         let imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
         return Image(uiImage: UIImage(systemName: "book", withConfiguration: imageConfig)!)
     }
     
     private func iconForAward(_ award: Award) -> some View {
         award.icon(enabled: book.hasAward(award))
+    }
+    
+    private func readIcon() -> some View {
+        return Image(systemName: "checkmark.circle.fill")
+            .imageScale(.large)
+            .foregroundColor(.green)
     }
 
     var body: some View {
@@ -61,6 +67,11 @@ struct BookRow : View {
                     iconForAward(.locus)
                 }
             }
+            Spacer()
+            if book.isRead {
+                readIcon()
+            }
+            
         }
     }
 }
@@ -68,10 +79,15 @@ struct BookRow : View {
 #if DEBUG
 struct BookRow_Previews : PreviewProvider {
     static var previews: some View {
-        Group {
-            BookRow(book: BookRepository.books[0])
-            BookRow(book: BookRepository.books[1])
-        }.previewLayout(.fixed(width: 300, height: 70))
+//        List {
+//            BookRow(book: BookRepository.books[0])
+//            BookRow(book: BookRepository.books[1])
+//            BookRow(book: BookRepository.books[2])
+//            BookRow(book: BookRepository.books[3])
+//            BookRow(book: BookRepository.books[4])
+//            BookRow(book: BookRepository.books[5])
+//        }.previewDevice("iPhone 7")
+        BookList().previewDevice("iPhone 7")
     }
 }
 #endif
