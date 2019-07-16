@@ -1,5 +1,5 @@
 //
-//  Filter.swift
+//  FilterState.swift
 //  SciBook
 //
 //  Created by Jake Foster on 7/15/19.
@@ -17,31 +17,31 @@ enum Filter: String, CaseIterable {
 }
 
 struct FilterState {
-    var isReadOn = false
-    var isUnreadOn = false
-    var isHugoOn = false
-    var isNebulaOn = false
-    var isLocusOn = false
+    var isReadSpecified = false
+    var isUnreadSpecified = false
+    var isHugoSpecified = false
+    var isNebulaSpecified = false
+    var isLocusSpecified = false
 }
 
 extension FilterState {
-    func isOn(_ filter: Filter) -> Bool {
+    func isSpecified(_ filter: Filter) -> Bool {
         switch filter {
         case .read:
-            return isReadOn
+            return isReadSpecified
         case .unread:
-            return isUnreadOn
+            return isUnreadSpecified
         case .hugo:
-            return isHugoOn
+            return isHugoSpecified
         case .nebula:
-            return isNebulaOn
+            return isNebulaSpecified
         case .locus:
-            return isLocusOn
+            return isLocusSpecified
         }
     } 
 
-    var enabledFilters: [Filter] {
-        Filter.allCases.filter { isOn($0) }
+    var specifiedFilters: [Filter] {
+        Filter.allCases.filter { isSpecified($0) }
     }
 
     mutating func clear() {
@@ -49,7 +49,7 @@ extension FilterState {
     }
 
     var summary: String {
-        let filters = enabledFilters
+        let filters = specifiedFilters
         guard !filters.isEmpty else { return "" }
         return filters.map { $0.rawValue }.joined(separator: ", ")
     }
