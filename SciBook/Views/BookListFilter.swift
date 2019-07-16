@@ -10,58 +10,99 @@ import SwiftUI
 
 struct BookListFilter : View {
     @State var isExpanded = false
-    var filterState: Binding<FilterState>
-
-    private func onButtonTap() {
-        filterState.value.isEnabled.toggle()
-
-        if !filterState.value.isEnabled {
-            isExpanded = false
-        } else if filterState.value.specifiedFilters.isEmpty {
-            isExpanded = true
-        }
-    }
-
-    // using image instead of button to avoid row flash
-    var filterButton: some View {
-            Image(systemName: filterState.value.isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
-                .foregroundColor(filterState.value.isEnabled ? .blue : .primary)
-                .imageScale(.large)
-                .tapAction(onButtonTap)
-    }
-
-    var filterDescription: some View {
-        VStack {
-            Text("Filtered by:")
-            Text(filterState.value.summary)
-                .foregroundColor(.blue)
-                .tapAction { self.isExpanded.toggle() }
-        }.font(.caption)
-    }
+    @Binding var filterState: FilterState
 
     var body: some View {
         Group {
             HStack {
                 filterButton
                 Spacer()
-                if !filterState.value.summary.isEmpty {
+                if !filterStateSummary.isEmpty {
                     filterDescription
                     Spacer()
                 }
             }
             if isExpanded {
-                VStack(alignment: .leading) {
-                    HStack {
-                        ToggleText(label: Filter.read.rawValue, isOn: filterState.binding.isReadSpecified)
-                        ToggleText(label: Filter.unread.rawValue, isOn: filterState.binding.isUnreadSpecified)
-                    }
-                    HStack {
-                        ToggleText(label: Filter.hugo.rawValue, isOn: filterState.binding.isHugoSpecified)
-                        ToggleText(label: Filter.nebula.rawValue, isOn: filterState.binding.isNebulaSpecified)
-                        ToggleText(label: Filter.locus.rawValue, isOn: filterState.binding.isLocusSpecified)
-                    }
-                }
+                filterOptions
             }
         }
+    }
+
+    // using image instead of button to avoid row flash
+    private var filterButton: some View {
+            Image(systemName: filterState.isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
+                .foregroundColor(filterState.isEnabled ? .blue : .primary)
+                .imageScale(.large)
+                .tapAction(filterButtonTap)
+    }
+
+    private func filterButtonTap() {
+        filterState.isEnabled.toggle()
+
+        if !filterState.isEnabled {
+            isExpanded = false
+        } else if filterState.specifiedFilters.isEmpty {
+            isExpanded = true
+        }
+    }
+
+    private var filterDescription: some View {
+        VStack {
+            Text("Filtered by:")
+            Text(filterStateSummary)
+                .foregroundColor(.blue)
+                .tapAction { self.isExpanded.toggle() }
+        }.font(.caption)
+    }
+
+    //TODO: consider changing this to read like English
+    //    Showing only books that are:
+    //    Read
+    //    Unread
+    //    Hugo winners
+    //    Hugo and Nebula winners
+    //    Hugo, Nebula, and Locus winners
+    //
+    //    Read that are Hugo winners
+    //    Unread that are Hugo, Nebula, and Locus winners
+    private var filterStateSummary: String {
+        guard filterState.isEnabled else { return "" }
+        let filters = filterState.specifiedFilters
+        guard !filters.isEmpty else { return "" }
+        return filters.map(displayForFilter).joined(separator: ", ")
+    }
+
+    private func makeToggleTextFor(_ filter: FilterState.Value) -> ToggleText {
+        ToggleText(label: displayForFilter(filter), isOn: $filterState.bindingForFilter(filter))
+    }
+
+    private var filterOptions: some View {
+        VStack(alignment: .leading) {
+            HStack {
+                makeToggleTextFor(.read)
+                makeToggleTextFor(.unread)
+            }
+            HStack {
+                makeToggleTextFor(.hugo)
+                makeToggleTextFor(.nebula)
+                makeToggleTextFor(.locus)
+            }
+        }
+    }
+}
+
+private func displayForFilter(_ filter: FilterState.Value) -> String {
+    switch filter {
+    case .read: return "Read"
+    case .unread: return "Unread"
+    case .hugo: return "Hugo"
+    case .nebula: return "Nebula"
+    case .locus: return "Locus"
+    }
+}
+
+private extension Binding where Value == FilterState {
+    func bindingForFilter(_ filter: FilterState.Value) -> Binding<Bool> {
+        return self[FilterState.propertyKeyPathFor(filter)]
     }
 }

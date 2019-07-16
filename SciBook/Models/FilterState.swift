@@ -8,15 +8,12 @@
 
 import Foundation
 
-enum Filter: String, CaseIterable {
-    case read = "Read"
-    case unread = "Unread"
-    case hugo = "Hugo"
-    case nebula = "Nebula"
-    case locus = "Locus"
-}
-
 struct FilterState {
+
+    enum Value: CaseIterable {
+        case read, unread, hugo, nebula, locus
+    }
+
     var isEnabled = false
     var isReadSpecified = false {
         didSet {
@@ -38,33 +35,26 @@ struct FilterState {
 }
 
 extension FilterState {
-    func isSpecified(_ filter: Filter) -> Bool {
+    static func propertyKeyPathFor(_ filter: Value) -> WritableKeyPath<FilterState, Bool> {
         switch filter {
         case .read:
-            return isReadSpecified
+            return \.isReadSpecified
         case .unread:
-            return isUnreadSpecified
+            return \.isUnreadSpecified
         case .hugo:
-            return isHugoSpecified
+            return \.isHugoSpecified
         case .nebula:
-            return isNebulaSpecified
+            return \.isNebulaSpecified
         case .locus:
-            return isLocusSpecified
+            return \.isLocusSpecified
         }
-    } 
-
-    var specifiedFilters: [Filter] {
-        Filter.allCases.filter { isSpecified($0) }
     }
 
-    mutating func clear() {
-        self = FilterState()
+    func isSpecified(_ filter: Value) -> Bool {
+        return self[keyPath: Self.propertyKeyPathFor(filter)]
     }
 
-    var summary: String {
-        guard isEnabled else { return "" }
-        let filters = specifiedFilters
-        guard !filters.isEmpty else { return "" }
-        return filters.map { $0.rawValue }.joined(separator: ", ")
+    var specifiedFilters: [Value] {
+        Value.allCases.filter(isSpecified)
     }
 }

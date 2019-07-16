@@ -8,50 +8,8 @@
 
 import SwiftUI
 
-extension Award {
-    func icon(enabled: Bool) -> some View {
-        let color: Color = {
-            switch (enabled, self) {
-            case (false, _): return .gray
-            case (true, .hugo): return .red
-            case (true, .nebula): return .blue
-            case (true, .locus): return .green
-            }
-        }()
-
-        var imageName: String = {
-            switch self {
-            case .hugo: return "h.square"
-            case .nebula: return "n.square"
-            case .locus: return "l.square"
-            }
-        }()
-        
-        if enabled {
-            imageName += ".fill"
-        }
-        return Image(systemName: imageName)
-            .foregroundColor(color)
-    }
-}
-
 struct BookRow : View {
     let book: Book
-    
-    private var coverImage: some View {
-        let imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
-        return Image(uiImage: UIImage(systemName: "book", withConfiguration: imageConfig)!)
-    }
-    
-    private func iconForAward(_ award: Award) -> some View {
-        award.icon(enabled: book.hasAward(award))
-    }
-    
-    private func readIcon() -> some View {
-        return Image(systemName: "checkmark.circle.fill")
-            .imageScale(.large)
-            .foregroundColor(.green)
-    }
 
     var body: some View {
         HStack {
@@ -71,23 +29,60 @@ struct BookRow : View {
             if book.isRead {
                 readIcon()
             }
-            
         }
+    }
+    
+    private var coverImage: some View {
+        let imageConfig = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        //TODO: "book" is just a placeholder image
+        return Image(uiImage: UIImage(systemName: "book", withConfiguration: imageConfig)!)
+    }
+    
+    private func iconForAward(_ award: Award) -> some View {
+        award.icon(enabled: book.hasAward(award))
+    }
+    
+    private func readIcon() -> some View {
+        return Image(systemName: "checkmark.circle.fill")
+            .imageScale(.large)
+            .foregroundColor(.green)
+    }
+}
+
+private extension Award {
+    func icon(enabled: Bool) -> some View {
+        let color: Color = {
+            switch (enabled, self) {
+            case (false, _): return .gray
+            case (true, .hugo): return .red
+            case (true, .nebula): return .blue
+            case (true, .locus): return .green
+            }
+        }()
+
+        var imageName: String = {
+            switch self {
+            case .hugo: return "h.square"
+            case .nebula: return "n.square"
+            case .locus: return "l.square"
+            }
+        }()
+
+        if enabled {
+            imageName += ".fill"
+        }
+        return Image(systemName: imageName)
+            .foregroundColor(color)
     }
 }
 
 #if DEBUG
 struct BookRow_Previews : PreviewProvider {
     static var previews: some View {
-//        List {
-//            BookRow(book: BookRepository.books[0])
-//            BookRow(book: BookRepository.books[1])
-//            BookRow(book: BookRepository.books[2])
-//            BookRow(book: BookRepository.books[3])
-//            BookRow(book: BookRepository.books[4])
-//            BookRow(book: BookRepository.books[5])
-//        }.previewDevice("iPhone 7")
-        BookList().previewDevice("iPhone 7")
+        Group {
+            BookRow(book: BookRepository.books[0])
+            BookRow(book: BookRepository.books[1])
+        }.previewLayout(.fixed(width: 300, height: 70))
     }
 }
 #endif
