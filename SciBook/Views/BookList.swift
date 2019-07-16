@@ -28,7 +28,7 @@ struct BookList : View {
         BookRepository.books.filter { book in
             guard filterState.isEnabled else { return true }
 
-            for filter in filterState.specifiedFilters {
+            for filter in filterState.selectedFilters {
                 switch filter {
                 case .read:
                     if !book.isRead { return false }

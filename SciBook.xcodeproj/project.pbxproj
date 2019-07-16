@@ -49,6 +49,7 @@
 		5554994022DD01C7005C0344 /* BookListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListFilter.swift; sourceTree = "<group>"; };
 		5554994222DD07C8005C0344 /* ToggleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleText.swift; sourceTree = "<group>"; };
 		5554994422DD786C005C0344 /* FilterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterState.swift; sourceTree = "<group>"; };
+		5554994622DE0765005C0344 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
 		5591B9A222D7B9F20024DAD1 /* SciBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5591B9A522D7B9F20024DAD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5591B9A722D7B9F20024DAD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		5591B99922D7B9F20024DAD1 = {
 			isa = PBXGroup;
 			children = (
+				5554994622DE0765005C0344 /* Notes.md */,
 				5591B9A422D7B9F20024DAD1 /* SciBook */,
 				5591B9BE22D7B9F40024DAD1 /* SciBookTests */,
 				5591B9C922D7B9F40024DAD1 /* SciBookUITests */,

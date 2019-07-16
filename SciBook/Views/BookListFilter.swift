@@ -31,7 +31,7 @@ struct BookListFilter : View {
     // using image instead of button to avoid row flash
     private var filterButton: some View {
             Image(systemName: filterState.isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
-                .foregroundColor(filterState.isEnabled ? .blue : .primary)
+                .foregroundColor(.blue)
                 .imageScale(.large)
                 .tapAction(filterButtonTap)
     }
@@ -41,7 +41,7 @@ struct BookListFilter : View {
 
         if !filterState.isEnabled {
             isExpanded = false
-        } else if filterState.specifiedFilters.isEmpty {
+        } else if filterState.selectedFilters.isEmpty {
             isExpanded = true
         }
     }
@@ -56,7 +56,7 @@ struct BookListFilter : View {
     }
 
     //TODO: consider changing this to read like English
-    //    Showing only books that are:
+    //    Only showing books that are:
     //    Read
     //    Unread
     //    Hugo winners
@@ -67,8 +67,7 @@ struct BookListFilter : View {
     //    Unread that are Hugo, Nebula, and Locus winners
     private var filterStateSummary: String {
         guard filterState.isEnabled else { return "" }
-        let filters = filterState.specifiedFilters
-        guard !filters.isEmpty else { return "" }
+        let filters = filterState.selectedFilters
         return filters.map(displayForFilter).joined(separator: ", ")
     }
 
@@ -103,6 +102,6 @@ private func displayForFilter(_ filter: FilterState.Value) -> String {
 
 private extension Binding where Value == FilterState {
     func bindingForFilter(_ filter: FilterState.Value) -> Binding<Bool> {
-        return self[FilterState.propertyKeyPathFor(filter)]
+        return self[FilterState.selectedKeyPathFor(filter)]
     }
 }

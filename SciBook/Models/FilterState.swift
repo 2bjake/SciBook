@@ -15,46 +15,46 @@ struct FilterState {
     }
 
     var isEnabled = false
-    var isReadSpecified = false {
+    var isReadSelected = false {
         didSet {
-            if isReadSpecified {
-                isUnreadSpecified = false
+            if isReadSelected {
+                isUnreadSelected = false
             }
         }
     }
-    var isUnreadSpecified = false {
+    var isUnreadSelected = false {
         didSet {
-            if isUnreadSpecified {
-                isReadSpecified = false
+            if isUnreadSelected {
+                isReadSelected = false
             }
         }
     }
-    var isHugoSpecified = false
-    var isNebulaSpecified = false
-    var isLocusSpecified = false
+    var isHugoSelected = false
+    var isNebulaSelected = false
+    var isLocusSelected = false
 }
 
 extension FilterState {
-    static func propertyKeyPathFor(_ filter: Value) -> WritableKeyPath<FilterState, Bool> {
+    static func selectedKeyPathFor(_ filter: Value) -> WritableKeyPath<FilterState, Bool> {
         switch filter {
         case .read:
-            return \.isReadSpecified
+            return \.isReadSelected
         case .unread:
-            return \.isUnreadSpecified
+            return \.isUnreadSelected
         case .hugo:
-            return \.isHugoSpecified
+            return \.isHugoSelected
         case .nebula:
-            return \.isNebulaSpecified
+            return \.isNebulaSelected
         case .locus:
-            return \.isLocusSpecified
+            return \.isLocusSelected
         }
     }
 
-    func isSpecified(_ filter: Value) -> Bool {
-        return self[keyPath: Self.propertyKeyPathFor(filter)]
+    func isSelected(_ filter: Value) -> Bool {
+        return self[keyPath: Self.selectedKeyPathFor(filter)]
     }
 
-    var specifiedFilters: [Value] {
-        Value.allCases.filter(isSpecified)
+    var selectedFilters: [Value] {
+        Value.allCases.filter(isSelected)
     }
 }
