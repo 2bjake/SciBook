@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ToggleText : View {
     let label: String
-    var isOn: Binding<Bool>
+    let isOn: Binding<Bool>
     
 
     //TODO: Using Color.clear because Color.systemBackground is not available. Also, using Text.tapAction instead of Button because it doesn't work well in a List.

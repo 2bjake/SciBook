@@ -27,11 +27,35 @@ private func yearAwardSorter(a: Book, b: Book) -> Bool {
 }
 
 struct BookList : View {
+    @State var filterState = FilterState()
+
+    var filteredSortedBooks: [Book] {
+        BookRepository.books.filter { book in
+            guard filterState.isEnabled else { return true }
+
+            for filter in filterState.specifiedFilters {
+                switch filter {
+                case .read:
+                    if !book.isRead { return false }
+                case .unread:
+                    if book.isRead { return false }
+                case .hugo:
+                    if !book.hasAward(.hugo) { return false }
+                case .nebula:
+                    if !book.hasAward(.nebula) { return false }
+                case .locus:
+                    if !book.hasAward(.locus) { return false }
+                }
+            }
+            return true
+        }.sorted(by: yearAwardSorter)
+    }
+
     var body: some View {
         NavigationView {
             List {
-                BookListFilter()
-                ForEach(BookRepository.books.sorted(by: yearAwardSorter)) { book in
+                BookListFilter(filterState: $filterState)
+                ForEach(filteredSortedBooks) { book in
                     NavigationLink(destination: BookDetail(book: book)) {
                         BookRow(book: book)
                     }

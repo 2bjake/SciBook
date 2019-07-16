@@ -9,26 +9,34 @@
 import SwiftUI
 
 struct BookListFilter : View {
-    @State var isEnabled = false
     @State var isExpanded = false
-    @State var filterState = FilterState()
+    var filterState: Binding<FilterState>
 
     private func onButtonTap() {
-        isEnabled.toggle()
+        filterState.value.isEnabled.toggle()
 
-        if !isEnabled {
+        if !filterState.value.isEnabled {
             isExpanded = false
-        } else if isEnabled && filterState.specifiedFilters.isEmpty {
+        } else if filterState.value.specifiedFilters.isEmpty {
             isExpanded = true
         }
     }
 
     // using image instead of button to avoid row flash
     var filterButton: some View {
-            Image(systemName: isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
-                .foregroundColor(isEnabled ? .blue : .primary)
+            Image(systemName: filterState.value.isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
+                .foregroundColor(filterState.value.isEnabled ? .blue : .primary)
                 .imageScale(.large)
                 .tapAction(onButtonTap)
+    }
+
+    var filterDescription: some View {
+        VStack {
+            Text("Filtered by:")
+            Text(filterState.value.summary)
+                .foregroundColor(.blue)
+                .tapAction { self.isExpanded.toggle() }
+        }.font(.caption)
     }
 
     var body: some View {
@@ -36,37 +44,24 @@ struct BookListFilter : View {
             HStack {
                 filterButton
                 Spacer()
-                if isEnabled && !filterState.specifiedFilters.isEmpty {
-                    VStack {
-                        Text("Filtered by:")
-                        Text(filterState.summary)
-                            .foregroundColor(.blue)
-                            .tapAction { self.isExpanded.toggle() }
-                    }.font(.caption)
+                if !filterState.value.summary.isEmpty {
+                    filterDescription
                     Spacer()
                 }
             }
             if isExpanded {
                 VStack(alignment: .leading) {
                     HStack {
-                        ToggleText(label: Filter.read.rawValue, isOn: $filterState.isReadSpecified)
-                        ToggleText(label: Filter.unread.rawValue, isOn: $filterState.isUnreadSpecified)
+                        ToggleText(label: Filter.read.rawValue, isOn: filterState.binding.isReadSpecified)
+                        ToggleText(label: Filter.unread.rawValue, isOn: filterState.binding.isUnreadSpecified)
                     }
                     HStack {
-                        ToggleText(label: Filter.hugo.rawValue, isOn: $filterState.isHugoSpecified)
-                        ToggleText(label: Filter.nebula.rawValue, isOn: $filterState.isNebulaSpecified)
-                        ToggleText(label: Filter.locus.rawValue, isOn: $filterState.isLocusSpecified)
+                        ToggleText(label: Filter.hugo.rawValue, isOn: filterState.binding.isHugoSpecified)
+                        ToggleText(label: Filter.nebula.rawValue, isOn: filterState.binding.isNebulaSpecified)
+                        ToggleText(label: Filter.locus.rawValue, isOn: filterState.binding.isLocusSpecified)
                     }
                 }
             }
         }
     }
 }
-
-#if DEBUG
-struct BookListFilter_Previews : PreviewProvider {
-    static var previews: some View {
-        BookListFilter(isExpanded: true)
-    }
-}
-#endif

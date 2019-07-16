@@ -17,8 +17,21 @@ enum Filter: String, CaseIterable {
 }
 
 struct FilterState {
-    var isReadSpecified = false
-    var isUnreadSpecified = false
+    var isEnabled = false
+    var isReadSpecified = false {
+        didSet {
+            if isReadSpecified {
+                isUnreadSpecified = false
+            }
+        }
+    }
+    var isUnreadSpecified = false {
+        didSet {
+            if isUnreadSpecified {
+                isReadSpecified = false
+            }
+        }
+    }
     var isHugoSpecified = false
     var isNebulaSpecified = false
     var isLocusSpecified = false
@@ -49,6 +62,7 @@ extension FilterState {
     }
 
     var summary: String {
+        guard isEnabled else { return "" }
         let filters = specifiedFilters
         guard !filters.isEmpty else { return "" }
         return filters.map { $0.rawValue }.joined(separator: ", ")

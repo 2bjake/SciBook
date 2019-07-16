@@ -18,7 +18,7 @@ public struct Book: Identifiable {
 
 // TODO: make this real
 extension Book {
-    public var isRead: Bool { Bool.random() }
+    public var isRead: Bool { hasAward(.hugo) && hasAward(.nebula) }
 }
 
 public extension Book {
