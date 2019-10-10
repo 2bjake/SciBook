@@ -33,7 +33,7 @@ struct BookListFilter : View {
             Image(systemName: filterState.isEnabled ?  "line.horizontal.3.decrease.circle.fill" : "line.horizontal.3.decrease.circle")
                 .foregroundColor(.blue)
                 .imageScale(.large)
-                .tapAction(filterButtonTap)
+                .onTapGesture(perform: filterButtonTap)
     }
 
     private func filterButtonTap() {
@@ -51,7 +51,7 @@ struct BookListFilter : View {
             Text("Filtered by:")
             Text(filterStateSummary)
                 .foregroundColor(.blue)
-                .tapAction { self.isExpanded.toggle() }
+                .onTapGesture { self.isExpanded.toggle() }
         }.font(.caption)
     }
 
@@ -72,7 +72,8 @@ struct BookListFilter : View {
     }
 
     private func makeToggleTextFor(_ filter: FilterState.Value) -> ToggleText {
-        ToggleText(label: displayForFilter(filter), isOn: $filterState.bindingForFilter(filter))
+        ToggleText(label: displayForFilter(filter),
+                   isOn: $filterState[dynamicMember: FilterState.selectedKeyPathFor(filter)])
     }
 
     private var filterOptions: some View {
@@ -81,6 +82,7 @@ struct BookListFilter : View {
                 makeToggleTextFor(.read)
                 makeToggleTextFor(.unread)
             }
+            Spacer()
             HStack {
                 makeToggleTextFor(.hugo)
                 makeToggleTextFor(.nebula)
@@ -100,8 +102,13 @@ private func displayForFilter(_ filter: FilterState.Value) -> String {
     }
 }
 
-private extension Binding where Value == FilterState {
-    func bindingForFilter(_ filter: FilterState.Value) -> Binding<Bool> {
-        return self[FilterState.selectedKeyPathFor(filter)]
+#if DEBUG
+struct BookListFilter_Previews : PreviewProvider {
+    static var state = FilterState()
+
+    static var previews: some View {
+        BookListFilter(filterState: Binding<FilterState>(get: { Self.state }, set: { Self.state = $0 }))
     }
 }
+#endif
+

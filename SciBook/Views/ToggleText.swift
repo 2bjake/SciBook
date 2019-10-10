@@ -18,8 +18,17 @@ struct ToggleText : View {
             .foregroundColor(isOn ? Color.white : .blue)
             .padding(.horizontal, 10)
             .background(isOn ? Color.blue : .clear)
-            .cornerRadius(10)
-            .border(Color.blue, cornerRadius: 10)
-            .tapAction { self.isOn.toggle() }
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.blue))
+            .onTapGesture { self.isOn.toggle() }
     }
 }
+
+#if DEBUG
+struct ToggleText_Previews : PreviewProvider {
+    static var previews: some View {
+        ToggleText(label: "Test1", isOn: .constant(true))
+    }
+}
+#endif
+

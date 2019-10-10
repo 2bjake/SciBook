@@ -6,8 +6,6 @@
 //  Copyright © 2019 Foster, Jake. All rights reserved.
 //
 
-import SwiftUI
-
 public struct Book: Identifiable {
     public let id: Int
     public let title: String

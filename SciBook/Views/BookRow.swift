@@ -19,14 +19,11 @@ struct BookRow : View {
                     .font(.headline)
                 Text("\(book.year) - \(book.authorName)")
                     .font(.subheadline)
-                HStack(alignment: .center) {
-                    iconForAward(.hugo)
-                    iconForAward(.nebula)
-                    iconForAward(.locus)
-                }
+                AwardIcons(book: book)
             }
-            Spacer()
+
             if book.isRead {
+                Spacer()
                 readIcon()
             }
         }
@@ -37,42 +34,11 @@ struct BookRow : View {
         //TODO: "book" is just a placeholder image
         return Image(uiImage: UIImage(systemName: "book", withConfiguration: imageConfig)!)
     }
-    
-    private func iconForAward(_ award: Award) -> some View {
-        award.icon(enabled: book.hasAward(award))
-    }
-    
+
     private func readIcon() -> some View {
         return Image(systemName: "checkmark.circle.fill")
             .imageScale(.large)
             .foregroundColor(.green)
-    }
-}
-
-private extension Award {
-    func icon(enabled: Bool) -> some View {
-        let color: Color = {
-            switch (enabled, self) {
-            case (false, _): return .gray
-            case (true, .hugo): return .red
-            case (true, .nebula): return .blue
-            case (true, .locus): return .green
-            }
-        }()
-
-        var imageName: String = {
-            switch self {
-            case .hugo: return "h.square"
-            case .nebula: return "n.square"
-            case .locus: return "l.square"
-            }
-        }()
-
-        if enabled {
-            imageName += ".fill"
-        }
-        return Image(systemName: imageName)
-            .foregroundColor(color)
     }
 }
 
@@ -82,7 +48,7 @@ struct BookRow_Previews : PreviewProvider {
         Group {
             BookRow(book: BookRepository.books[0])
             BookRow(book: BookRepository.books[1])
-        }.previewLayout(.fixed(width: 300, height: 70))
+        }
     }
 }
 #endif

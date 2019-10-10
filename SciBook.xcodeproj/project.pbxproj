@@ -23,6 +23,7 @@
 		5591B9E522D7BD700024DAD1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E422D7BD700024DAD1 /* Book.swift */; };
 		5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E622D7C0860024DAD1 /* BookRow.swift */; };
 		5591B9E922D7C1860024DAD1 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E822D7C1860024DAD1 /* BookDetail.swift */; };
+		55DCB3A522F4B19B00231CFE /* AwardIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCB3A422F4B19B00231CFE /* AwardIcons.swift */; };
 		55E710BE22D8057200A17E3D /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BD22D8057200A17E3D /* BookRepository.swift */; };
 		55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BF22D80A0000A17E3D /* BookJSONModel.swift */; };
 		55E710C222D80A4800A17E3D /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710C122D80A4800A17E3D /* Award.swift */; };
@@ -69,6 +70,7 @@
 		5591B9E422D7BD700024DAD1 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		5591B9E622D7C0860024DAD1 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 		5591B9E822D7C1860024DAD1 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
+		55DCB3A422F4B19B00231CFE /* AwardIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardIcons.swift; sourceTree = "<group>"; };
 		55E710BD22D8057200A17E3D /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
 		55E710BF22D80A0000A17E3D /* BookJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookJSONModel.swift; sourceTree = "<group>"; };
 		55E710C122D80A4800A17E3D /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				5591B9E822D7C1860024DAD1 /* BookDetail.swift */,
 				5554994022DD01C7005C0344 /* BookListFilter.swift */,
 				5554994222DD07C8005C0344 /* ToggleText.swift */,
+				55DCB3A422F4B19B00231CFE /* AwardIcons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				5591B9D922D7BA290024DAD1 /* BookList.swift in Sources */,
 				5591B9AB22D7B9F20024DAD1 /* SciBook.xcdatamodeld in Sources */,
 				5591B9E522D7BD700024DAD1 /* Book.swift in Sources */,
+				55DCB3A522F4B19B00231CFE /* AwardIcons.swift in Sources */,
 				5554994522DD786C005C0344 /* FilterState.swift in Sources */,
 				55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */,
 				5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */,
