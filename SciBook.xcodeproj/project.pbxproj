@@ -7,91 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5554994122DD01C7005C0344 /* BookListFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554994022DD01C7005C0344 /* BookListFilter.swift */; };
-		5554994322DD07C8005C0344 /* ToggleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554994222DD07C8005C0344 /* ToggleText.swift */; };
-		5554994522DD786C005C0344 /* FilterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5554994422DD786C005C0344 /* FilterState.swift */; };
-		5591B9A622D7B9F20024DAD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9A522D7B9F20024DAD1 /* AppDelegate.swift */; };
-		5591B9A822D7B9F20024DAD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9A722D7B9F20024DAD1 /* SceneDelegate.swift */; };
-		5591B9AB22D7B9F20024DAD1 /* SciBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9A922D7B9F20024DAD1 /* SciBook.xcdatamodeld */; };
-		5591B9AF22D7B9F40024DAD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5591B9AE22D7B9F40024DAD1 /* Assets.xcassets */; };
-		5591B9B222D7B9F40024DAD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5591B9B122D7B9F40024DAD1 /* Preview Assets.xcassets */; };
-		5591B9B522D7B9F40024DAD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5591B9B322D7B9F40024DAD1 /* LaunchScreen.storyboard */; };
-		5591B9C022D7B9F40024DAD1 /* SciBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9BF22D7B9F40024DAD1 /* SciBookTests.swift */; };
-		5591B9CB22D7B9F40024DAD1 /* SciBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9CA22D7B9F40024DAD1 /* SciBookUITests.swift */; };
-		5591B9D922D7BA290024DAD1 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9D822D7BA290024DAD1 /* BookList.swift */; };
-		5591B9DB22D7BACA0024DAD1 /* books.json in Resources */ = {isa = PBXBuildFile; fileRef = 5591B9DA22D7BACA0024DAD1 /* books.json */; };
-		5591B9E522D7BD700024DAD1 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E422D7BD700024DAD1 /* Book.swift */; };
-		5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E622D7C0860024DAD1 /* BookRow.swift */; };
-		5591B9E922D7C1860024DAD1 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5591B9E822D7C1860024DAD1 /* BookDetail.swift */; };
-		55DCB3A522F4B19B00231CFE /* AwardIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55DCB3A422F4B19B00231CFE /* AwardIcons.swift */; };
-		55E710BE22D8057200A17E3D /* BookRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BD22D8057200A17E3D /* BookRepository.swift */; };
-		55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710BF22D80A0000A17E3D /* BookJSONModel.swift */; };
-		55E710C222D80A4800A17E3D /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E710C122D80A4800A17E3D /* Award.swift */; };
+		551008DB234F74DE008C2CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551008DA234F74DE008C2CED /* AppDelegate.swift */; };
+		551008DD234F74DE008C2CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551008DC234F74DE008C2CED /* SceneDelegate.swift */; };
+		551008E0234F74DE008C2CED /* SciBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 551008DE234F74DE008C2CED /* SciBook.xcdatamodeld */; };
+		551008E2234F74DE008C2CED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551008E1234F74DE008C2CED /* ContentView.swift */; };
+		551008E4234F74DF008C2CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551008E3234F74DF008C2CED /* Assets.xcassets */; };
+		551008E7234F74DF008C2CED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 551008E6234F74DF008C2CED /* Preview Assets.xcassets */; };
+		551008EA234F74DF008C2CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551008E8234F74DF008C2CED /* LaunchScreen.storyboard */; };
+		551008F5234F74DF008C2CED /* SciBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551008F4234F74DF008C2CED /* SciBookTests.swift */; };
+		55100900234F74DF008C2CED /* SciBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551008FF234F74DF008C2CED /* SciBookUITests.swift */; };
+		55100910234F7743008C2CED /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5510090F234F7743008C2CED /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5591B9BC22D7B9F40024DAD1 /* PBXContainerItemProxy */ = {
+		551008F1234F74DF008C2CED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5591B99A22D7B9F20024DAD1 /* Project object */;
+			containerPortal = 551008CF234F74DE008C2CED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5591B9A122D7B9F20024DAD1;
+			remoteGlobalIDString = 551008D6234F74DE008C2CED;
 			remoteInfo = SciBook;
 		};
-		5591B9C722D7B9F40024DAD1 /* PBXContainerItemProxy */ = {
+		551008FC234F74DF008C2CED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 5591B99A22D7B9F20024DAD1 /* Project object */;
+			containerPortal = 551008CF234F74DE008C2CED /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5591B9A122D7B9F20024DAD1;
+			remoteGlobalIDString = 551008D6234F74DE008C2CED;
 			remoteInfo = SciBook;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5554994022DD01C7005C0344 /* BookListFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListFilter.swift; sourceTree = "<group>"; };
-		5554994222DD07C8005C0344 /* ToggleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleText.swift; sourceTree = "<group>"; };
-		5554994422DD786C005C0344 /* FilterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterState.swift; sourceTree = "<group>"; };
-		5554994622DE0765005C0344 /* Notes.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Notes.md; sourceTree = "<group>"; };
-		5591B9A222D7B9F20024DAD1 /* SciBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5591B9A522D7B9F20024DAD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5591B9A722D7B9F20024DAD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5591B9AA22D7B9F20024DAD1 /* SciBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SciBook.xcdatamodel; sourceTree = "<group>"; };
-		5591B9AE22D7B9F40024DAD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5591B9B122D7B9F40024DAD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5591B9B422D7B9F40024DAD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5591B9B622D7B9F40024DAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5591B9BB22D7B9F40024DAD1 /* SciBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SciBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5591B9BF22D7B9F40024DAD1 /* SciBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciBookTests.swift; sourceTree = "<group>"; };
-		5591B9C122D7B9F40024DAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5591B9C622D7B9F40024DAD1 /* SciBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SciBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5591B9CA22D7B9F40024DAD1 /* SciBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciBookUITests.swift; sourceTree = "<group>"; };
-		5591B9CC22D7B9F40024DAD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5591B9D822D7BA290024DAD1 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
-		5591B9DA22D7BACA0024DAD1 /* books.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = books.json; sourceTree = "<group>"; };
-		5591B9E422D7BD700024DAD1 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
-		5591B9E622D7C0860024DAD1 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
-		5591B9E822D7C1860024DAD1 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
-		55DCB3A422F4B19B00231CFE /* AwardIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardIcons.swift; sourceTree = "<group>"; };
-		55E710BD22D8057200A17E3D /* BookRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRepository.swift; sourceTree = "<group>"; };
-		55E710BF22D80A0000A17E3D /* BookJSONModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookJSONModel.swift; sourceTree = "<group>"; };
-		55E710C122D80A4800A17E3D /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		551008D7234F74DE008C2CED /* SciBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SciBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		551008DA234F74DE008C2CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		551008DC234F74DE008C2CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		551008DF234F74DE008C2CED /* SciBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SciBook.xcdatamodel; sourceTree = "<group>"; };
+		551008E1234F74DE008C2CED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		551008E3234F74DF008C2CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		551008E6234F74DF008C2CED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		551008E9234F74DF008C2CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		551008EB234F74DF008C2CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551008F0234F74DF008C2CED /* SciBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SciBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551008F4234F74DF008C2CED /* SciBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciBookTests.swift; sourceTree = "<group>"; };
+		551008F6234F74DF008C2CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		551008FB234F74DF008C2CED /* SciBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SciBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		551008FF234F74DF008C2CED /* SciBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SciBookUITests.swift; sourceTree = "<group>"; };
+		55100901234F74DF008C2CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5510090D234F7726008C2CED /* SciBook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SciBook.entitlements; sourceTree = "<group>"; };
+		5510090F234F7743008C2CED /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5591B99F22D7B9F20024DAD1 /* Frameworks */ = {
+		551008D4234F74DE008C2CED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55100910234F7743008C2CED /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		551008ED234F74DF008C2CED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5591B9B822D7B9F40024DAD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5591B9C322D7B9F40024DAD1 /* Frameworks */ = {
+		551008F8234F74DF008C2CED /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,113 +82,87 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5591B99922D7B9F20024DAD1 = {
+		551008CE234F74DE008C2CED = {
 			isa = PBXGroup;
 			children = (
-				5554994622DE0765005C0344 /* Notes.md */,
-				5591B9A422D7B9F20024DAD1 /* SciBook */,
-				5591B9BE22D7B9F40024DAD1 /* SciBookTests */,
-				5591B9C922D7B9F40024DAD1 /* SciBookUITests */,
-				5591B9A322D7B9F20024DAD1 /* Products */,
+				551008D9234F74DE008C2CED /* SciBook */,
+				551008F3234F74DF008C2CED /* SciBookTests */,
+				551008FE234F74DF008C2CED /* SciBookUITests */,
+				551008D8234F74DE008C2CED /* Products */,
+				5510090E234F7743008C2CED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5591B9A322D7B9F20024DAD1 /* Products */ = {
+		551008D8234F74DE008C2CED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9A222D7B9F20024DAD1 /* SciBook.app */,
-				5591B9BB22D7B9F40024DAD1 /* SciBookTests.xctest */,
-				5591B9C622D7B9F40024DAD1 /* SciBookUITests.xctest */,
+				551008D7234F74DE008C2CED /* SciBook.app */,
+				551008F0234F74DF008C2CED /* SciBookTests.xctest */,
+				551008FB234F74DF008C2CED /* SciBookUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5591B9A422D7B9F20024DAD1 /* SciBook */ = {
+		551008D9234F74DE008C2CED /* SciBook */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9E322D7BCDA0024DAD1 /* Views */,
-				5591B9DD22D7BB5B0024DAD1 /* Models */,
-				5591B9DC22D7BB510024DAD1 /* Resources */,
-				5591B9A522D7B9F20024DAD1 /* AppDelegate.swift */,
-				5591B9A722D7B9F20024DAD1 /* SceneDelegate.swift */,
-				5591B9AE22D7B9F40024DAD1 /* Assets.xcassets */,
-				5591B9B322D7B9F40024DAD1 /* LaunchScreen.storyboard */,
-				5591B9B622D7B9F40024DAD1 /* Info.plist */,
-				5591B9A922D7B9F20024DAD1 /* SciBook.xcdatamodeld */,
-				5591B9B022D7B9F40024DAD1 /* Preview Content */,
+				5510090D234F7726008C2CED /* SciBook.entitlements */,
+				551008DA234F74DE008C2CED /* AppDelegate.swift */,
+				551008DC234F74DE008C2CED /* SceneDelegate.swift */,
+				551008E1234F74DE008C2CED /* ContentView.swift */,
+				551008E3234F74DF008C2CED /* Assets.xcassets */,
+				551008E8234F74DF008C2CED /* LaunchScreen.storyboard */,
+				551008EB234F74DF008C2CED /* Info.plist */,
+				551008DE234F74DE008C2CED /* SciBook.xcdatamodeld */,
+				551008E5234F74DF008C2CED /* Preview Content */,
 			);
 			path = SciBook;
 			sourceTree = "<group>";
 		};
-		5591B9B022D7B9F40024DAD1 /* Preview Content */ = {
+		551008E5234F74DF008C2CED /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9B122D7B9F40024DAD1 /* Preview Assets.xcassets */,
+				551008E6234F74DF008C2CED /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5591B9BE22D7B9F40024DAD1 /* SciBookTests */ = {
+		551008F3234F74DF008C2CED /* SciBookTests */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9BF22D7B9F40024DAD1 /* SciBookTests.swift */,
-				5591B9C122D7B9F40024DAD1 /* Info.plist */,
+				551008F4234F74DF008C2CED /* SciBookTests.swift */,
+				551008F6234F74DF008C2CED /* Info.plist */,
 			);
 			path = SciBookTests;
 			sourceTree = "<group>";
 		};
-		5591B9C922D7B9F40024DAD1 /* SciBookUITests */ = {
+		551008FE234F74DF008C2CED /* SciBookUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9CA22D7B9F40024DAD1 /* SciBookUITests.swift */,
-				5591B9CC22D7B9F40024DAD1 /* Info.plist */,
+				551008FF234F74DF008C2CED /* SciBookUITests.swift */,
+				55100901234F74DF008C2CED /* Info.plist */,
 			);
 			path = SciBookUITests;
 			sourceTree = "<group>";
 		};
-		5591B9DC22D7BB510024DAD1 /* Resources */ = {
+		5510090E234F7743008C2CED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5591B9DA22D7BACA0024DAD1 /* books.json */,
+				5510090F234F7743008C2CED /* CloudKit.framework */,
 			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		5591B9DD22D7BB5B0024DAD1 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				55E710BD22D8057200A17E3D /* BookRepository.swift */,
-				55E710C122D80A4800A17E3D /* Award.swift */,
-				5591B9E422D7BD700024DAD1 /* Book.swift */,
-				55E710BF22D80A0000A17E3D /* BookJSONModel.swift */,
-				5554994422DD786C005C0344 /* FilterState.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		5591B9E322D7BCDA0024DAD1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				5591B9D822D7BA290024DAD1 /* BookList.swift */,
-				5591B9E622D7C0860024DAD1 /* BookRow.swift */,
-				5591B9E822D7C1860024DAD1 /* BookDetail.swift */,
-				5554994022DD01C7005C0344 /* BookListFilter.swift */,
-				5554994222DD07C8005C0344 /* ToggleText.swift */,
-				55DCB3A422F4B19B00231CFE /* AwardIcons.swift */,
-			);
-			path = Views;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5591B9A122D7B9F20024DAD1 /* SciBook */ = {
+		551008D6234F74DE008C2CED /* SciBook */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5591B9CF22D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBook" */;
+			buildConfigurationList = 55100904234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBook" */;
 			buildPhases = (
-				5591B99E22D7B9F20024DAD1 /* Sources */,
-				5591B99F22D7B9F20024DAD1 /* Frameworks */,
-				5591B9A022D7B9F20024DAD1 /* Resources */,
+				551008D3234F74DE008C2CED /* Sources */,
+				551008D4234F74DE008C2CED /* Frameworks */,
+				551008D5234F74DE008C2CED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -215,69 +170,69 @@
 			);
 			name = SciBook;
 			productName = SciBook;
-			productReference = 5591B9A222D7B9F20024DAD1 /* SciBook.app */;
+			productReference = 551008D7234F74DE008C2CED /* SciBook.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5591B9BA22D7B9F40024DAD1 /* SciBookTests */ = {
+		551008EF234F74DF008C2CED /* SciBookTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5591B9D222D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBookTests" */;
+			buildConfigurationList = 55100907234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBookTests" */;
 			buildPhases = (
-				5591B9B722D7B9F40024DAD1 /* Sources */,
-				5591B9B822D7B9F40024DAD1 /* Frameworks */,
-				5591B9B922D7B9F40024DAD1 /* Resources */,
+				551008EC234F74DF008C2CED /* Sources */,
+				551008ED234F74DF008C2CED /* Frameworks */,
+				551008EE234F74DF008C2CED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5591B9BD22D7B9F40024DAD1 /* PBXTargetDependency */,
+				551008F2234F74DF008C2CED /* PBXTargetDependency */,
 			);
 			name = SciBookTests;
 			productName = SciBookTests;
-			productReference = 5591B9BB22D7B9F40024DAD1 /* SciBookTests.xctest */;
+			productReference = 551008F0234F74DF008C2CED /* SciBookTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5591B9C522D7B9F40024DAD1 /* SciBookUITests */ = {
+		551008FA234F74DF008C2CED /* SciBookUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5591B9D522D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBookUITests" */;
+			buildConfigurationList = 5510090A234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBookUITests" */;
 			buildPhases = (
-				5591B9C222D7B9F40024DAD1 /* Sources */,
-				5591B9C322D7B9F40024DAD1 /* Frameworks */,
-				5591B9C422D7B9F40024DAD1 /* Resources */,
+				551008F7234F74DF008C2CED /* Sources */,
+				551008F8234F74DF008C2CED /* Frameworks */,
+				551008F9234F74DF008C2CED /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5591B9C822D7B9F40024DAD1 /* PBXTargetDependency */,
+				551008FD234F74DF008C2CED /* PBXTargetDependency */,
 			);
 			name = SciBookUITests;
 			productName = SciBookUITests;
-			productReference = 5591B9C622D7B9F40024DAD1 /* SciBookUITests.xctest */;
+			productReference = 551008FB234F74DF008C2CED /* SciBookUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5591B99A22D7B9F20024DAD1 /* Project object */ = {
+		551008CF234F74DE008C2CED /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Jake Foster";
 				TargetAttributes = {
-					5591B9A122D7B9F20024DAD1 = {
-						CreatedOnToolsVersion = 11.0;
+					551008D6234F74DE008C2CED = {
+						CreatedOnToolsVersion = 11.1;
 					};
-					5591B9BA22D7B9F40024DAD1 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 5591B9A122D7B9F20024DAD1;
+					551008EF234F74DF008C2CED = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 551008D6234F74DE008C2CED;
 					};
-					5591B9C522D7B9F40024DAD1 = {
-						CreatedOnToolsVersion = 11.0;
-						TestTargetID = 5591B9A122D7B9F20024DAD1;
+					551008FA234F74DF008C2CED = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 551008D6234F74DE008C2CED;
 					};
 				};
 			};
-			buildConfigurationList = 5591B99D22D7B9F20024DAD1 /* Build configuration list for PBXProject "SciBook" */;
+			buildConfigurationList = 551008D2234F74DE008C2CED /* Build configuration list for PBXProject "SciBook" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -285,38 +240,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 5591B99922D7B9F20024DAD1;
-			productRefGroup = 5591B9A322D7B9F20024DAD1 /* Products */;
+			mainGroup = 551008CE234F74DE008C2CED;
+			productRefGroup = 551008D8234F74DE008C2CED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5591B9A122D7B9F20024DAD1 /* SciBook */,
-				5591B9BA22D7B9F40024DAD1 /* SciBookTests */,
-				5591B9C522D7B9F40024DAD1 /* SciBookUITests */,
+				551008D6234F74DE008C2CED /* SciBook */,
+				551008EF234F74DF008C2CED /* SciBookTests */,
+				551008FA234F74DF008C2CED /* SciBookUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5591B9A022D7B9F20024DAD1 /* Resources */ = {
+		551008D5234F74DE008C2CED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5591B9DB22D7BACA0024DAD1 /* books.json in Resources */,
-				5591B9B522D7B9F40024DAD1 /* LaunchScreen.storyboard in Resources */,
-				5591B9B222D7B9F40024DAD1 /* Preview Assets.xcassets in Resources */,
-				5591B9AF22D7B9F40024DAD1 /* Assets.xcassets in Resources */,
+				551008EA234F74DF008C2CED /* LaunchScreen.storyboard in Resources */,
+				551008E7234F74DF008C2CED /* Preview Assets.xcassets in Resources */,
+				551008E4234F74DF008C2CED /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5591B9B922D7B9F40024DAD1 /* Resources */ = {
+		551008EE234F74DF008C2CED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5591B9C422D7B9F40024DAD1 /* Resources */ = {
+		551008F9234F74DF008C2CED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,63 +280,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5591B99E22D7B9F20024DAD1 /* Sources */ = {
+		551008D3234F74DE008C2CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5591B9A622D7B9F20024DAD1 /* AppDelegate.swift in Sources */,
-				5591B9E922D7C1860024DAD1 /* BookDetail.swift in Sources */,
-				5554994322DD07C8005C0344 /* ToggleText.swift in Sources */,
-				5554994122DD01C7005C0344 /* BookListFilter.swift in Sources */,
-				55E710BE22D8057200A17E3D /* BookRepository.swift in Sources */,
-				55E710C222D80A4800A17E3D /* Award.swift in Sources */,
-				5591B9A822D7B9F20024DAD1 /* SceneDelegate.swift in Sources */,
-				5591B9D922D7BA290024DAD1 /* BookList.swift in Sources */,
-				5591B9AB22D7B9F20024DAD1 /* SciBook.xcdatamodeld in Sources */,
-				5591B9E522D7BD700024DAD1 /* Book.swift in Sources */,
-				55DCB3A522F4B19B00231CFE /* AwardIcons.swift in Sources */,
-				5554994522DD786C005C0344 /* FilterState.swift in Sources */,
-				55E710C022D80A0000A17E3D /* BookJSONModel.swift in Sources */,
-				5591B9E722D7C0860024DAD1 /* BookRow.swift in Sources */,
+				551008DB234F74DE008C2CED /* AppDelegate.swift in Sources */,
+				551008DD234F74DE008C2CED /* SceneDelegate.swift in Sources */,
+				551008E2234F74DE008C2CED /* ContentView.swift in Sources */,
+				551008E0234F74DE008C2CED /* SciBook.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5591B9B722D7B9F40024DAD1 /* Sources */ = {
+		551008EC234F74DF008C2CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5591B9C022D7B9F40024DAD1 /* SciBookTests.swift in Sources */,
+				551008F5234F74DF008C2CED /* SciBookTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5591B9C222D7B9F40024DAD1 /* Sources */ = {
+		551008F7234F74DF008C2CED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5591B9CB22D7B9F40024DAD1 /* SciBookUITests.swift in Sources */,
+				55100900234F74DF008C2CED /* SciBookUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5591B9BD22D7B9F40024DAD1 /* PBXTargetDependency */ = {
+		551008F2234F74DF008C2CED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5591B9A122D7B9F20024DAD1 /* SciBook */;
-			targetProxy = 5591B9BC22D7B9F40024DAD1 /* PBXContainerItemProxy */;
+			target = 551008D6234F74DE008C2CED /* SciBook */;
+			targetProxy = 551008F1234F74DF008C2CED /* PBXContainerItemProxy */;
 		};
-		5591B9C822D7B9F40024DAD1 /* PBXTargetDependency */ = {
+		551008FD234F74DF008C2CED /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5591B9A122D7B9F20024DAD1 /* SciBook */;
-			targetProxy = 5591B9C722D7B9F40024DAD1 /* PBXContainerItemProxy */;
+			target = 551008D6234F74DE008C2CED /* SciBook */;
+			targetProxy = 551008FC234F74DF008C2CED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5591B9B322D7B9F40024DAD1 /* LaunchScreen.storyboard */ = {
+		551008E8234F74DF008C2CED /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5591B9B422D7B9F40024DAD1 /* Base */,
+				551008E9234F74DF008C2CED /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -390,7 +334,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5591B9CD22D7B9F40024DAD1 /* Debug */ = {
+		55100902234F74DF008C2CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -440,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -450,7 +394,7 @@
 			};
 			name = Debug;
 		};
-		5591B9CE22D7B9F40024DAD1 /* Release */ = {
+		55100903234F74DF008C2CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -494,7 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -504,12 +448,14 @@
 			};
 			name = Release;
 		};
-		5591B9D022D7B9F40024DAD1 /* Debug */ = {
+		55100905234F74DF008C2CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciBook/SciBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "SciBook/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"SciBook/Preview Content\"";
+				DEVELOPMENT_TEAM = 42ETQ4A89Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SciBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -523,12 +469,14 @@
 			};
 			name = Debug;
 		};
-		5591B9D122D7B9F40024DAD1 /* Release */ = {
+		55100906234F74DF008C2CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SciBook/SciBook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "SciBook/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"SciBook/Preview Content\"";
+				DEVELOPMENT_TEAM = 42ETQ4A89Z;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SciBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -542,13 +490,14 @@
 			};
 			name = Release;
 		};
-		5591B9D322D7B9F40024DAD1 /* Debug */ = {
+		55100908234F74DF008C2CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SciBookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,13 +511,14 @@
 			};
 			name = Debug;
 		};
-		5591B9D422D7B9F40024DAD1 /* Release */ = {
+		55100909234F74DF008C2CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SciBookTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -582,7 +532,7 @@
 			};
 			name = Release;
 		};
-		5591B9D622D7B9F40024DAD1 /* Debug */ = {
+		5510090B234F74DF008C2CED /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -601,7 +551,7 @@
 			};
 			name = Debug;
 		};
-		5591B9D722D7B9F40024DAD1 /* Release */ = {
+		5510090C234F74DF008C2CED /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -623,38 +573,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5591B99D22D7B9F20024DAD1 /* Build configuration list for PBXProject "SciBook" */ = {
+		551008D2234F74DE008C2CED /* Build configuration list for PBXProject "SciBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5591B9CD22D7B9F40024DAD1 /* Debug */,
-				5591B9CE22D7B9F40024DAD1 /* Release */,
+				55100902234F74DF008C2CED /* Debug */,
+				55100903234F74DF008C2CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5591B9CF22D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBook" */ = {
+		55100904234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5591B9D022D7B9F40024DAD1 /* Debug */,
-				5591B9D122D7B9F40024DAD1 /* Release */,
+				55100905234F74DF008C2CED /* Debug */,
+				55100906234F74DF008C2CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5591B9D222D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBookTests" */ = {
+		55100907234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBookTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5591B9D322D7B9F40024DAD1 /* Debug */,
-				5591B9D422D7B9F40024DAD1 /* Release */,
+				55100908234F74DF008C2CED /* Debug */,
+				55100909234F74DF008C2CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5591B9D522D7B9F40024DAD1 /* Build configuration list for PBXNativeTarget "SciBookUITests" */ = {
+		5510090A234F74DF008C2CED /* Build configuration list for PBXNativeTarget "SciBookUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5591B9D622D7B9F40024DAD1 /* Debug */,
-				5591B9D722D7B9F40024DAD1 /* Release */,
+				5510090B234F74DF008C2CED /* Debug */,
+				5510090C234F74DF008C2CED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -662,17 +612,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5591B9A922D7B9F20024DAD1 /* SciBook.xcdatamodeld */ = {
+		551008DE234F74DE008C2CED /* SciBook.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5591B9AA22D7B9F20024DAD1 /* SciBook.xcdatamodel */,
+				551008DF234F74DE008C2CED /* SciBook.xcdatamodel */,
 			);
-			currentVersion = 5591B9AA22D7B9F20024DAD1 /* SciBook.xcdatamodel */;
+			currentVersion = 551008DF234F74DE008C2CED /* SciBook.xcdatamodel */;
 			path = SciBook.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 5591B99A22D7B9F20024DAD1 /* Project object */;
+	rootObject = 551008CF234F74DE008C2CED /* Project object */;
 }

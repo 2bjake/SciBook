@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SciBook
 //
-//  Created by Jake Foster on 7/11/19.
+//  Created by Jake Foster on 10/10/19.
 //  Copyright © 2019 Jake Foster. All rights reserved.
 //
 
@@ -11,6 +11,9 @@ import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
